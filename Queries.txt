@@ -1,0 +1,27 @@
+1) Aggregate the most revenue collected videos of each youtuber
+       
+2) Display the members worked in the most liked video 
+
+3) List the channels with their total likes and dislikes
+
+4) Sort the videos most liked/disliked by viewers above the age of 30
+
+5) Group the youtubers who work under the genre of "EDUCATION"
+
+6) Display the videos with ratings above 4 for each viewers
+
+7) Display the departments with most videos worked on 
+
+8) List the most contributed viewer.
+
+9) Update the Total_Likes/ Total_Dislikes section for each youtuber with sum of likes and dislikes of 
+   videos took by the youtuber
+
+
+10) Project only the members of each genre
+
+11) count the total videos liked and disliked by each viewer.
+
+12) Display the most liked/most disliked channel
+
+13) Display the member who worked in most videos
