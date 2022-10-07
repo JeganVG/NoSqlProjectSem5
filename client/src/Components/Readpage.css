@@ -1,4 +1,4 @@
-.CreatePage {
+.ReadPage {
     background-color: red;
     background-image: url("./Background.jpg");
     height: 100vh;
@@ -7,7 +7,7 @@
     opacity:0.9;
 }
 
-.subpagecreate {
+.subpageread {
     border-style: solid;
     border-radius: 50px;
     height: 600px;
@@ -32,7 +32,7 @@
     font-size: x-large;
 }
 
-.createtitle {
+.readtitle {
     border-style:ridge;
     width:60%;
     float:none;top:0;

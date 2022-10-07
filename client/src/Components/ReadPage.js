@@ -1,18 +1,18 @@
 import App from "./App.js"
 import LoadingButton from '@mui/material/Button';
-import "./CreatePage.css"
+import "./Readpage.css"
 
-function CreatePage () {
+function ReadPage () {
     const handleClick = ()=> {
         window.location.replace("http://localhost:3000/")
     }
     return(
-        <div className="CreatePage">
-            <div className="subpagecreate">
+        <div className="ReadPage">
+            <div className="subpageread">
                 <br></br>
                 <br></br>
-                <div className="createtitle">
-                    <h1 className="text">Create Query Window</h1>
+                <div className="readtitle">
+                    <h1 className="text">Read Query Window</h1>
                 </div>
                 <br></br>
                 <br></br>
@@ -20,7 +20,7 @@ function CreatePage () {
                 <br></br>
                 <br></br>
                 <br></br>
-                <textarea className="textarea" placeholder="Type Your Create Query Here..." required></textarea><br></br><br></br>
+                <textarea className="textarea" placeholder="Type Your Read Query Here..." required></textarea><br></br><br></br>
                 <LoadingButton
                     loading
                     loadingPosition="start"
@@ -40,4 +40,4 @@ function CreatePage () {
     )
 }
 
-export default CreatePage;
+export default ReadPage;

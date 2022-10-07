@@ -4,11 +4,11 @@
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity:0.9
+    opacity:0.9;
 }
 
 .subpage {
-    border-style: ridge;
+    border-style: solid;
     border-radius: 50px;
     height: 600px;
     width: 500px;
@@ -24,5 +24,9 @@
 }
 
 .Create:hover {
-    
+    color:black
+}
+
+.Read:hover {
+    color:black
 }
