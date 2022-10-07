@@ -23,6 +23,11 @@
     text-align: center;
 }
 
-.Back {
-    
+.textarea {
+    width: 75%;
+    height: 40%;
+    opacity: 0.8;
+    font-weight: bold;
+    resize: none;
+    font-size: x-large;
 }
