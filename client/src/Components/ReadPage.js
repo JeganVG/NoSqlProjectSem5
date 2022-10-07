@@ -1,4 +1,3 @@
-import App from "./App.js"
 import LoadingButton from '@mui/material/Button';
 import "./Readpage.css"
 
