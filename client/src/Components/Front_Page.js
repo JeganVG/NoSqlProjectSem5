@@ -1,13 +1,9 @@
-import LoadingButton from '@mui/material/Button';
+import Button from '@mui/material/Button';
 import "./Front_Page.css"
 
 function Front_Page() {
     const handleClick1 = () =>{
         window.location.replace("http://localhost:3000/createpage")
-    }
-
-    const handleClick2= ()=>{
-        window.location.replace("http://localhost:3000/readpage")
     }
     return(
         <div className="Front_Page">
@@ -19,38 +15,11 @@ function Front_Page() {
                 <br></br>
                 <br></br>
                 <br></br>
-                <LoadingButton
-                    loading
-                    loadingPosition="start"
-                    variant="contained"
-                    className="Create" onClick={handleClick1}>
-                    Create Query
-                </LoadingButton><br></br><br></br>
-                <LoadingButton
-                    loading
-                    loadingPosition="start"
-                    variant="contained" 
-                    className="Read" onClick={handleClick2}>
-                    Read Query
-                </LoadingButton><br></br><br></br>
-                <LoadingButton
-                    loading
-                    loadingPosition="start"
-                    variant="contained">
-                    Update Query
-                </LoadingButton><br></br><br></br>
-                <LoadingButton
-                    loading
-                    loadingPosition="start"
-                    variant="contained">
-                    Delete Query
-                </LoadingButton><br></br><br></br>
-                <LoadingButton
-                    loading
-                    loadingPosition="start"
-                    variant="contained">
-                    Aggregate Query
-                </LoadingButton>
+                <Button variant="contained" className="Create" color="error" onClick={handleClick1}>Create Query</Button><br></br><br></br>
+                <Button variant="contained" className="Read" color="error" >Read Query</Button><br></br><br></br>
+                <Button variant="contained" className="Update" color="error" >Update Query</Button><br></br><br></br>
+                <Button variant="contained" className="Delete" color="error" >Delete Query</Button><br></br><br></br>
+                <Button variant="contained" className="Aggregate" color="error" >Aggregate Query</Button><br></br><br></br>
             </div> 
         </div>
     )

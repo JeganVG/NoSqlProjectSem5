@@ -1,4 +1,4 @@
-import LoadingButton from '@mui/material/Button';
+import Button from '@mui/material/Button';
 import "./Create_Page.css"
 
 function CreatePage () {
@@ -20,21 +20,9 @@ function CreatePage () {
                 <br></br>
                 <br></br>
                 <textarea className="textarea" placeholder="Type Your Create Query Here..." required></textarea><br></br><br></br>
-                <LoadingButton
-                    loading
-                    loadingPosition="start"
-                    variant="contained"
-                    className="Back" >
-                    Create
-                </LoadingButton>
+                <Button variant="contained" className="Create" color="error">Create</Button><br></br><br></br>
             </div>
-            <LoadingButton
-                    loading
-                    loadingPosition="start"
-                    variant="contained"
-                    className="Back" onClick={handleClick}>
-                    Home
-                </LoadingButton>
+            <Button variant="contained" className="Create" color="error" onClick={handleClick}>Home</Button>
         </div>
     )
 }
