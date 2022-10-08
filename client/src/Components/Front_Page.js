@@ -6,6 +6,9 @@ function Front_Page() {
     const handleClick1 = () =>{
         window.location.replace("http://localhost:3000/createpage")
     }
+    const handleClick5 = () =>{
+        window.location.replace("http://localhost:3000/AggregatePage")
+    }
     return(
         <div className="Front_Page">
             <div className="Sub_Page">
@@ -20,7 +23,7 @@ function Front_Page() {
                 <Button variant="contained" className="Read" color="error" >Read Query</Button><br></br><br></br>
                 <Button variant="contained" className="Update" color="error" >Update Query</Button><br></br><br></br>
                 <Button variant="contained" className="Delete" color="error" >Delete Query</Button><br></br><br></br>
-                <Button variant="contained" className="Aggregate" color="error" >Aggregate Query</Button><br></br><br></br>
+                <Button variant="contained" className="Aggregate" color="error" onClick={handleClick5}>Aggregate Query</Button><br></br><br></br>
             </div> 
         </div>
     )
