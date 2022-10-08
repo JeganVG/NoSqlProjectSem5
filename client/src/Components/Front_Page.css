@@ -1,4 +1,4 @@
-.Page1{
+.Front_Page{
     background-color: red;
     background-image: url("./Background.jpg");
     height: 100vh;
@@ -7,7 +7,7 @@
     opacity:0.9;
 }
 
-.subpage {
+.Sub_Page {
     border-style: solid;
     border-radius: 50px;
     height: 600px;

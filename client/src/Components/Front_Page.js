@@ -1,7 +1,7 @@
 import LoadingButton from '@mui/material/Button';
-import "./Page1.css"
+import "./Front_Page.css"
 
-function page1() {
+function Front_Page() {
     const handleClick1 = () =>{
         window.location.replace("http://localhost:3000/createpage")
     }
@@ -10,8 +10,8 @@ function page1() {
         window.location.replace("http://localhost:3000/readpage")
     }
     return(
-        <div className="page1">
-            <div className="subpage">
+        <div className="Front_Page">
+            <div className="Sub_Page">
                 <br></br>
                 <br></br>
                 <br></br>
@@ -56,4 +56,4 @@ function page1() {
     )
 }
 
-export default page1;
+export default Front_Page;

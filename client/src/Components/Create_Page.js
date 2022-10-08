@@ -1,16 +1,16 @@
 import LoadingButton from '@mui/material/Button';
-import "./CreatePage.css"
+import "./Create_Page.css"
 
 function CreatePage () {
     const handleClick = ()=> {
         window.location.replace("http://localhost:3000/")
     }
     return(
-        <div className="CreatePage">
-            <div className="subpagecreate">
+        <div className="Create_Page">
+            <div className="Sub_Page_Create">
                 <br></br>
                 <br></br>
-                <div className="createtitle">
+                <div className="Create_Title">
                     <h1 className="text">Create Query Window</h1>
                 </div>
                 <br></br>

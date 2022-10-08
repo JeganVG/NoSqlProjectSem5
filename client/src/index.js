@@ -8,8 +8,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import CreatePage from './Components/CreatePage';
-import ReadPage from './Components/ReadPage';
+import CreatePage from './Components/Create_Page';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +16,6 @@ root.render(
   <Routes>
     <Route path="/" element={<App />}/>
     <Route path="/createpage" element={<CreatePage />}/>
-    <Route path="/readpage" element={<ReadPage />}/>
   </Routes>
 </BrowserRouter>
 );
