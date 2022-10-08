@@ -5,7 +5,7 @@ async function main() {
      * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
      * See https://docs.mongodb.com/drivers/node/ for more details
      */
-    const uri = "mongodb+srv://<username>:<password>@<your-cluster-url>/sample_airbnb?retryWrites=true&w=majority";
+    const uri = "mongodb://localhost:27017//cinema";
     
     /**
      * The Mongo Client you will use to interact with your database
@@ -20,6 +20,7 @@ async function main() {
         // Connect to the MongoDB cluster
         await client.connect();
         await aggregate(client);
+        console.log('connected');
 
         // Make the appropriate DB calls
 
@@ -35,11 +36,12 @@ async function aggregate(client){
     const pipeline = [{
         '$project': {
             'name':1
-        }
-    }];
-    const aggCursor = client.db("cinema").collection("movie").aggregate(pipeline);
+    }}
+    ];
 
+    const aggCursor = client.db("cinema").collection("movies").aggregate(pipeline);
     await aggCursor.forEach(ele =>{
-        console.log(`${ele.name}`);
+        console.log('hello');
+        console.log(`${ ele.name }`);
     })
 }
