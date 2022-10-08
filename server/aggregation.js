@@ -19,6 +19,7 @@ async function main() {
     try {
         // Connect to the MongoDB cluster
         await client.connect();
+        await aggregate(client);
 
         // Make the appropriate DB calls
 
@@ -30,4 +31,15 @@ async function main() {
 
 main().catch(console.error);
 
-// Add functions that make DB calls here
+async function aggregate(client){
+    const pipeline = [{
+        '$project': {
+            'name':1
+        }
+    }];
+    const aggCursor = client.db("cinema").collection("movie").aggregate(pipeline);
+
+    await aggCursor.forEach(ele =>{
+        console.log(`${ele.name}`);
+    })
+}
