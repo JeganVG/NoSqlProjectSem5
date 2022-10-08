@@ -4,17 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "mongoose": "^6.6.1",
     "nodemon": "^2.0.20"
+=======
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.8"
+>>>>>>> 0270f2a35aa07935f98e97bd8739cce026403f34
   }
 }

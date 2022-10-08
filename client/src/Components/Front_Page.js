@@ -1,5 +1,6 @@
 import Button from '@mui/material/Button';
 import "./Front_Page.css"
+import React from 'react'
 
 function Front_Page() {
     const handleClick1 = () =>{
