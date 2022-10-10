@@ -1,6 +1,5 @@
 
 const Department = require('../models/Departments')
-
 createDept = (req, res) => {
     const body = req.body
     console.log(body)
@@ -116,6 +115,8 @@ getDept = async (req, res) => {
         return res.status(200).json({ success: true, data: dept })
     }).catch(err => console.log(err))
 }
+
+
 
 module.exports = {
     createDept,

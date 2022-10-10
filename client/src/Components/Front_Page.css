@@ -1,7 +1,6 @@
 .Front_Page{
-    background-color: red;
-    background-image: url("./Background.jpg");
     height: 100vh;
+    background-image: url("./Background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity:0.9;
@@ -29,4 +28,27 @@
 
 .Read:hover {
     color:black
+}
+
+.Update:hover {
+    color:black
+}
+
+.Delete:hover {
+    color:black
+}
+
+.Aggregate:hover {
+    color:black
+}
+
+.insta_image {
+    height: 20px;
+    right:100px
+}
+
+.git_image {
+    height: 20px;
+    right:100px;
+    filter: drop-shadow(0 0 0 black);
 }

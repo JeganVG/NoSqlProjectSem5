@@ -45,3 +45,4 @@ async function aggregate(client){
         console.log(`${ ele.name }`);
     })
 }
+export default main;

@@ -9,6 +9,7 @@ import {
   Route,
 } from "react-router-dom";
 import CreatePage from './Components/Create_Page';
+import Departments from "./Components/Departments"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
   <Routes>
     <Route path="/" element={<App />}/>
     <Route path="/createpage" element={<CreatePage />}/>
+    <Route path="/departments" element={<Departments/>}/>
   </Routes>
 </BrowserRouter>
 );
