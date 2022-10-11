@@ -12,4 +12,4 @@ const Viewers = new Schema(
     {collection:'Viewers'}
 )
 
-module.exports = mongoose.model('movies', Movie)
+module.exports = mongoose.model('viewers', Viewers)

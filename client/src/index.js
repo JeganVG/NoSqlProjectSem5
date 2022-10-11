@@ -9,7 +9,9 @@ import {
   Route,
 } from "react-router-dom";
 import CreatePage from './Components/Create_Page';
-import Departments from "./Components/Departments"
+import Departments from "./Components/Create Pages/Create_Departments"
+import Videos from "./Components/Create Pages/Create_Videos"
+import Youtuber from "./Components/Create Pages/Create_Youtubers"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +19,9 @@ root.render(
   <Routes>
     <Route path="/" element={<App />}/>
     <Route path="/createpage" element={<CreatePage />}/>
-    <Route path="/departments" element={<Departments/>}/>
+    <Route path="/CreateDepartments" element={<Departments/>}/>
+    <Route path="/CreateVideos" element={<Videos/>}/>
+    <Route path="/CreateYoutuber" element={<Youtuber/>}/>
   </Routes>
 </BrowserRouter>
 );

@@ -18,7 +18,7 @@ function CreatePage () {
                 </div>
                 <br></br>
                 <br></br>
-                <form action="" method="post" autocomplete="off">
+                <form action="http://localhost:3001/api/Dept" method="post" autocomplete="off">
                     <label className="label">Department Id</label><br></br><br></br>
                     <input type="text" name="Department_ID" className="textbox"></input><br></br><br></br>
                     <label className="label">Department Name</label><br></br><br></br>
@@ -27,6 +27,7 @@ function CreatePage () {
                     <input type="text" name="Members" className="textbox"></input><br></br><br></br>
                     <label className="label">Videos Produced</label><br></br><br></br>
                     <input type="text" name="Videos_Produced" className="textbox"></input><br></br><br></br>
+                    <button type="submit" className="label">INSERT</button>
                 </form>
             </div>
             <Button variant="contained" className="Back" color="error" onClick={DeptPage}>Back</Button>

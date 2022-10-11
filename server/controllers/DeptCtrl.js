@@ -34,7 +34,7 @@ createDept = (req, res) => {
         })
 }
 
-updateMovie = async (req, res) => {
+updateDept = async (req, res) => {
     const body = req.body
 
     if (!body) {

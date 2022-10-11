@@ -1,7 +1,7 @@
 .Create_Page {
     height: 100vh;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     opacity:0.9;
 }
 
