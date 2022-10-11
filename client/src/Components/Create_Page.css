@@ -1,7 +1,7 @@
 .Create_Page {
-    background-color: red;
-    background-image: url("./Background.jpg");
     height: 100vh;
+    background-color: palevioletred;
+    background-image: url("./Background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity:0.9;
@@ -11,7 +11,7 @@
     border-style: solid;
     border-radius: 50px;
     height: 600px;
-    width: 1000px;
+    width: 800px;
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -43,4 +43,34 @@
 .text {
     font-weight: bold;
     text-decoration: underline;
+}
+
+.Back {
+    top:700px;
+    left:10px
+}
+
+.Back:hover{
+    color:black;
+}
+
+.Dept:hover {
+    color:black
+}
+
+
+.Videos:hover {
+    color:black
+}
+
+.Viewers:hover {
+    color:black
+}
+
+.Members:hover {
+    color:black
+}
+
+.Youtubers:hover {
+    color:black
 }

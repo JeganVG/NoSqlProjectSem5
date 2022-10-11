@@ -1,11 +1,15 @@
 import Button from '@mui/material/Button';
 import "./Create_Page.css"
-import React from 'react'
 
 function CreatePage () {
     const handleClick = ()=> {
         window.location.replace("http://localhost:3000/")
     }
+
+    const DeptPage = ()=>{
+      window.location.replace("http://localhost:3000/departments/")
+    }
+
     return(
         <div className="Create_Page">
             <div className="Sub_Page_Create">
@@ -18,12 +22,13 @@ function CreatePage () {
                 <br></br>
                 <br></br>
                 <br></br>
-                <br></br>
-                <br></br>
-                <textarea className="textarea" placeholder="Type Your Create Query Here..." required></textarea><br></br><br></br>
-                <Button variant="contained" className="Create" color="error">Create</Button><br></br><br></br>
+                <Button variant="contained" className="Dept" color="success" onClick={DeptPage}>Departments</Button><br></br><br></br>
+                <Button variant="contained" className="Videos" color="success">Videos</Button><br></br><br></br>
+                <Button variant="contained" className="Viewers" color="success">Viewers</Button><br></br><br></br>
+                <Button variant="contained" className="Members" color="success">Members</Button><br></br><br></br>
+                <Button variant="contained" className="Youtubers" color="success">Youtubers</Button>
             </div>
-            <Button variant="contained" className="Create" color="error" onClick={handleClick}>Home</Button>
+            <Button variant="contained" className="Back" color="error" onClick={handleClick}>Back</Button>
         </div>
     )
 }
