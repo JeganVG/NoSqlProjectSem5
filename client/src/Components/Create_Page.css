@@ -10,7 +10,7 @@
 .Sub_Page_Create {
     border-style: solid;
     border-radius: 50px;
-    height: 600px;
+    height: 550px;
     width: 800px;
     margin: auto;
     justify-content: center;
@@ -35,7 +35,8 @@
 .Create_Title {
     border-style:ridge;
     width:60%;
-    float:none;top:0;
+    float:none;
+    top:0;
     margin:auto;
     border-radius:50px;
 }

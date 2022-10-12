@@ -19,19 +19,19 @@ function CreatePage () {
                 <br></br>
                 <br></br>
                 <form action="http://localhost:3001/api/CreateVideos" method="post" autocomplete="off">
-                    <label className="label">Video ID</label><br></br><br></br>
+                    <label className="label">Video Id</label><br></br><br></br>
                     <input type="text" name="Video_ID" className="textbox"></input><br></br><br></br>
                     <label className="label">Genre</label><br></br><br></br>
                     <input type="text" name="Genre" className="textbox"></input><br></br><br></br>
-                    <label className="label">REVENUE COLLECTED</label><br></br><br></br>
+                    <label className="label">Revenue Collected</label><br></br><br></br>
                     <input type="Number" name="Revenue_Collected" className="textbox"></input><br></br><br></br>
-                    <label className="label">TOTAL LIKES</label><br></br><br></br>
+                    <label className="label">Total Likes</label><br></br><br></br>
                     <input type="Number" name="Total_Likes" className="textbox"></input><br></br><br></br>
-                    <label className="label">TOTAL DISLIKES</label><br></br><br></br>
+                    <label className="label">Total Dislikes</label><br></br><br></br>
                     <input type="Number" name="Total_Dislikes" className="textbox"></input><br></br><br></br>
-                    <label className="label">VIDEO NAME</label><br></br><br></br>
+                    <label className="label">Video Name</label><br></br><br></br>
                     <input type="text" name="Video_Name" className="textbox"></input><br></br><br></br>
-                    <label className="label">YOUTUBER ID</label><br></br><br></br>
+                    <label className="label">Youtuber Id</label><br></br><br></br>
                     <input type="text" name="Youtuber_ID" className="textbox"></input><br></br><br></br>
                     
                     <button type="submit" className="label">INSERT</button>

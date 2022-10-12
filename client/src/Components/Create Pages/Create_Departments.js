@@ -18,6 +18,7 @@ function CreatePage () {
                 </div>
                 <br></br>
                 <br></br>
+                <br></br>
                 <form action="http://localhost:3001/api/Dept" method="post" autocomplete="off">
                     <label className="label">Department Id</label><br></br><br></br>
                     <input type="text" name="Department_ID" className="textbox"></input><br></br><br></br>
