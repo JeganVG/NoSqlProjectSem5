@@ -24,10 +24,6 @@ function Front_Page() {
                 <Button variant="contained" className="Delete" color="error" >Delete Query</Button><br></br><br></br>
                 <Button variant="contained" className="Aggregate" color="error" >Aggregate Query</Button><br></br><br></br>
             </div>
-            <br></br>
-            <p>
-                <label className="insta"><b>Follow Us On</b></label><br></br>
-            </p> 
         </div>
     )
 }
