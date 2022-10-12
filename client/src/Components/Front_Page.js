@@ -9,7 +9,7 @@ function Front_Page() {
 
     return(
         <div className="Front_Page">
-          <Marquee speed={200}><b>This Project Was Done By Jegan And Sweeton</b></Marquee>
+          <Marquee speed={200}><b>This Project Was Done By Jegan And Sweeton From MEPCO Schlenk College Of Engineering, Sivakasi</b></Marquee>
             <div className="Sub_Page">
                 <br></br>
                 <br></br>
