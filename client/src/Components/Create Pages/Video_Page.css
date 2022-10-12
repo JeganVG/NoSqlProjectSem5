@@ -2,17 +2,18 @@
     height: 100vh;
     background-color: palevioletred;
     background-image: url("./Background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
     opacity:0.9;
 }
 
 .Sub_Page_Create {
     border-style: solid;
     border-radius: 50px;
-    height: 550px;
-    width: 800px;
+    height: 700px;
+    width: 900px;
     margin: auto;
+    background-attachment:scroll;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -35,8 +36,7 @@
 .Create_Title {
     border-style:ridge;
     width:60%;
-    float:none;
-    top:0;
+    float:none;top:0;
     margin:auto;
     border-radius:50px;
 }
@@ -48,7 +48,8 @@
 
 .Back {
     top:700px;
-    left:10px
+    left:10px;
+    background-attachment: scroll;
 }
 
 .Back:hover{
