@@ -1,0 +1,12 @@
+<label className="label">Channel Name</label><br></br><br></br>
+                    <input type="text" name="Channel_Name" className="textbox"></input><br></br><br></br>
+                    <label className="label">Total Dislikes</label><br></br><br></br>
+                    <input type="text" name="Total_Dislikes" className="textbox"></input><br></br><br></br>
+                    <label className="label">Total Likes</label><br></br><br></br>
+                    <input type="Number" name="Total_Likes" className="textbox"></input><br></br><br></br>
+                    <label className="label">Videos</label><br></br><br></br>
+                    <input type="Number" name="Videos" className="textbox"></input><br></br><br></br>
+                    <label className="label">Youtuber Id</label><br></br><br></br>
+                    <input type="Number" name="Youtuber_ID" className="textbox"></input><br></br><br></br>
+                    <label className="label">Youtuber Name</label><br></br><br></br>
+                    <input type="text" name="Youtuber_Name" className="textbox"></input><br></br><br></br>

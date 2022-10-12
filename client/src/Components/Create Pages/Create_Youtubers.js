@@ -1,6 +1,5 @@
 import Button from '@mui/material/Button';
-import "./Create_Page.css"
-import "./Departments.css"
+import "./Video_Page.css"
 
 function CreatePage () {
 
@@ -19,21 +18,44 @@ function CreatePage () {
                 <br></br>
                 <br></br>
                 <form action="http://localhost:3001/api/CreateYoutuber" method="post" autocomplete="off">
-                    <label className="label">CHANNEL NAME</label><br></br><br></br>
-                    <input type="text" name="Channel_Name" className="textbox"></input><br></br><br></br>
-                    <label className="label">TOTAL DISLIKES</label><br></br><br></br>
-                    <input type="text" name="Total_Dislikes" className="textbox"></input><br></br><br></br>
-                    <label className="label">TOTAL LIKES</label><br></br><br></br>
-                    <input type="Number" name="Total_Likes" className="textbox"></input><br></br><br></br>
-                    <label className="label">VIDEOS</label><br></br><br></br>
-                    <input type="Number" name="Videos" className="textbox"></input><br></br><br></br>
-                    <label className="label">YOUTUBER ID</label><br></br><br></br>
-                    <input type="Number" name="Youtuber_ID" className="textbox"></input><br></br><br></br>
-                    <label className="label">YOUTUBER NAME</label><br></br><br></br>
-                    <input type="text" name="Youtuber_Name" className="textbox"></input><br></br><br></br>
-            
-                    
-                    <button type="submit" className="label">INSERT</button>
+                    <table>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        <td>
+                            <label className="label">Channel Name</label><br></br><br></br>
+                            <input type="text" name="Channel_Name" className="textbox"></input><br></br><br></br>
+                        </td>
+                        <td>
+                            <label className="label">Total Dislikes</label><br></br><br></br>
+                            <input type="text" name="Total_Dislikes" className="textbox"></input><br></br><br></br>
+                        </td>
+                    </table>
+                    <br></br>
+                    <br></br>
+                    <table>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        <td>
+                            <label className="label">Total Likes</label><br></br><br></br>
+                            <input type="Number" name="Total_Likes" className="textbox"></input><br></br><br></br>
+                        </td>
+                        <td>
+                            <label className="label">Videos</label><br></br><br></br>
+                            <input type="Number" name="Videos" className="textbox"></input><br></br><br></br>
+                        </td>
+                    </table>
+                    <br></br>
+                    <br></br>
+                    <table>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        <td>
+                            <label className="label">Youtuber Id</label><br></br><br></br>
+                            <input type="Number" name="Youtuber_ID" className="textbox"></input><br></br><br></br>
+                        </td>
+                        <td>
+                            <label className="label">Youtuber Name</label><br></br><br></br>
+                            <input type="text" name="Youtuber_Name" className="textbox"></input><br></br><br></br>
+                        </td>
+                    </table>
+                    <button type="submit" className="label">Insert</button>
                 </form>
             </div>
             <Button variant="contained" className="Back" color="error" onClick={DeptPage}>Back</Button>
