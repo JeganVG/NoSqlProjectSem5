@@ -20,8 +20,8 @@ function CreatePage () {
 
 
     return(
-        <div className="Create_Page">
-            <div className="Sub_Page_Create">
+        <div className="Create_Page1">
+            <div className="Sub_Page_Create1">
                 <br></br>
                 <br></br>
                 <div className="Create_Title">
