@@ -55,7 +55,7 @@ function CreatePage () {
                             <input type="text" name="Youtuber_Name" className="textbox"></input><br></br><br></br>
                         </td>
                     </table>
-                    <button type="submit" className="label">Insert</button>
+                    <button type="submit" className="label">INSERT</button>
                 </form>
             </div>
             <Button variant="contained" className="Back" color="error" onClick={DeptPage}>Back</Button>
