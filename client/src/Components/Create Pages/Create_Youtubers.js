@@ -26,7 +26,7 @@ function CreatePage () {
                         </td>
                         <td>
                             <label className="label">Total Dislikes</label><br></br><br></br>
-                            <input type="text" name="Total_Dislikes" className="textbox"></input><br></br><br></br>
+                            <input type="Number" name="Total_Dislikes" className="textbox"></input><br></br><br></br>
                         </td>
                     </table>
                     <br></br>
@@ -39,7 +39,7 @@ function CreatePage () {
                         </td>
                         <td>
                             <label className="label">Videos</label><br></br><br></br>
-                            <input type="Number" name="Videos" className="textbox"></input><br></br><br></br>
+                            <input type="text" name="Videos" className="textbox"></input><br></br><br></br>
                         </td>
                     </table>
                     <br></br>
@@ -48,7 +48,7 @@ function CreatePage () {
                         <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                         <td>
                             <label className="label">Youtuber Id</label><br></br><br></br>
-                            <input type="Number" name="Youtuber_ID" className="textbox"></input><br></br><br></br>
+                            <input type="text" name="Youtuber_ID" className="textbox"></input><br></br><br></br>
                         </td>
                         <td>
                             <label className="label">Youtuber Name</label><br></br><br></br>

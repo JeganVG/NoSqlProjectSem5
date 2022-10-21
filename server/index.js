@@ -6,7 +6,6 @@ const db = require('./DB/index')
 const Router = require('./routes/router')
 
 const app = express()
-const apiPort = 3001
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
@@ -20,4 +19,5 @@ app.get('/', (req, res) => {
 
 app.use('/api', Router)
 
+const apiPort = 3001
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))

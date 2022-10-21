@@ -26,7 +26,7 @@ router.post('/UpdateViewers', ViewersCtrl.updateViewers)
 
 // router.put('/movie/:id', MovieCtrl.updateMovie)
 // router.delete('/movie/:id', MovieCtrl.deleteMovie)
-router.get('/Dept/:id', DeptCtrl.getDeptById)
-router.get('/Dept', DeptCtrl.getDept)
+router.get('/ReadDept/:id', DeptCtrl.getDeptById)
+router.get('/ReadDept', DeptCtrl.getDept)
 
 module.exports = router

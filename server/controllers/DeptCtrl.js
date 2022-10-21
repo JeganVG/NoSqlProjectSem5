@@ -22,7 +22,7 @@ createDept = (req, res) => {
         .then(() => {
             return res.status(201).json({
                 success: true,
-                id: movie._id,
+                id: Depart._id,
                 message: 'Deparment created!',
             })
         })
@@ -72,7 +72,7 @@ updateDept = async (req, res) => {
     })
 }
 
-deleteMovie = async (req, res) => {
+deleteDept = async (req, res) => {
     await Movie.findOneAndDelete({ _id: req.params.id }, (err, movie) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
@@ -119,8 +119,8 @@ getDept = async (req, res) => {
 
 module.exports = {
     createDept,
-    updateMovie,
-    deleteMovie,
+    updateDept,
+    deleteDept,
     getDept,
     getDeptById,
 }

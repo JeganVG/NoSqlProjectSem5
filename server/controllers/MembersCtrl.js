@@ -22,7 +22,7 @@ createMembers = (req, res) => {
         .then(() => {
             return res.status(201).json({
                 success: true,
-                id: movie._id,
+                id:item._id,
                 message: 'Members created!',
             })
         })
@@ -115,7 +115,8 @@ getMembers = async (req, res) => {
                 .status(404)
                 .json({ success: false, error: `Members not found` })
         }
-        return res.status(200).json({ success: true, data: YT })
+        return YT
+        // return res.status(200).json({ success: true, data: YT })
     }).catch(err => console.log(err))
 }
 

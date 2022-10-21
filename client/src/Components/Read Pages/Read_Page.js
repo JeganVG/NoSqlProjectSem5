@@ -17,11 +17,13 @@ function ReadPage () {
                 </div>
                 <br></br>
                 <br></br>
-                <label className="label">Set Attribute 1</label><br></br><br></br>
+                <form action="http://localhost:3001/api/ReadDept" method="get">
+                {/* <label className="label">Set Attribute 1</label><br></br><br></br>
                 <input type="text" name="Department_ID" className="textbox"></input><br></br><br></br>
                 <label className="label">Set Attribute 2</label><br></br><br></br>
-                <input type="text" name="Department_Name" className="textbox"></input><br></br><br></br>
-                <Button variant="contained" className="button" >Fetch</Button>
+                <input type="text" name="Department_Name" className="textbox"></input><br></br><br></br> */}
+                <Button type="submit" variant="contained" className="button" >Fetch</Button>
+                </form>
             </div>
             <Button variant="contained" className="Back" color="error" onClick={handleClick}>Back</Button>
         </div>

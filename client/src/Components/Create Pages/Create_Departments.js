@@ -1,11 +1,32 @@
 import Button from '@mui/material/Button';
 import "./Create_Page.css"
 import "./Departments.css"
+import  {useState} from 'react'
 
 function CreatePage () {
 
     const DeptPage = ()=>{
       window.location.replace("http://localhost:3000/createpage/")
+    }
+    const [Department_ID, setDepartment_ID] = useState('');
+    const [Department_Name, setDepartment_Name] = useState('');
+    const [Members, setMembers]= useState('');
+    const [Videos_Produced, setVideos_Produced]= useState('');
+    const handlesubmit = (e) =>{
+        e.preventDefault();
+        const blog = {Department_ID, Department_Name, Members, Videos_Produced};
+        
+        fetch('http://localhost:3001/api/CreateDept',{
+            method:'POST',
+            headers:{"content-Type":"application/json"},
+            body:JSON.stringify(blog)
+        }).then(()=>{
+            console.log('NEW BLOG ADDED');
+        })
+        setDepartment_ID('');
+        setDepartment_Name('');
+        setMembers('');
+        setVideos_Produced('');
     }
 
     return(
@@ -19,16 +40,16 @@ function CreatePage () {
                 <br></br>
                 <br></br>
                 <br></br>
-                <form action="http://localhost:3001/api/Dept" method="post" autocomplete="off">
+                <form  method="post" autocomplete="off">
                     <label className="label">Department Id</label><br></br><br></br>
-                    <input type="text" name="Department_ID" className="textbox"></input><br></br><br></br>
+                    <input type="text" name="Department_ID" className="textbox" value={Department_ID} onChange={(e)=>setDepartment_ID(e.target.value)}></input><br></br><br></br>
                     <label className="label">Department Name</label><br></br><br></br>
-                    <input type="text" name="Department_Name" className="textbox"></input><br></br><br></br>
+                    <input type="text" name="Department_Name" className="textbox" value={Department_Name} onChange={(e)=>setDepartment_Name(e.target.value)}></input><br></br><br></br>
                     <label className="label">Members</label><br></br><br></br>
-                    <input type="text" name="Members" className="textbox"></input><br></br><br></br>
+                    <input type="text" name="Members" className="textbox" value={Members} onChange={(e)=>setMembers(e.target.value)}></input><br></br><br></br>
                     <label className="label">Videos Produced</label><br></br><br></br>
-                    <input type="text" name="Videos_Produced" className="textbox"></input><br></br><br></br>
-                    <button type="submit" className="label">INSERT</button>
+                    <input type="text" name="Videos_Produced" className="textbox" value={Videos_Produced} onChange={(e)=>setVideos_Produced(e.target.value)}></input><br></br><br></br>
+                    <button type="submit" className="label" onClick={handlesubmit}>INSERT</button>
                 </form>
             </div>
             <Button variant="contained" className="Back" color="error" onClick={DeptPage}>Back</Button>
