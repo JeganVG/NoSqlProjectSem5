@@ -6,26 +6,29 @@ import {useState} from 'react'
 function CreatePage () {
 
     const DeptPage = ()=>{
-      window.location.replace("http://localhost:3000/createpage/")
+      window.location.replace("http://localhost:3000/updatepage")
     }
-    const [Age, setAge] = useState('');
-    const [Contribution, setContribution] = useState('');
+    var [Age, setAge] = useState('');
+    var [Contribution, setContribution] = useState('');
     const [Region, setRegion]= useState('');
     const [Videos_Dislikedarray, setVideos_Disliked]= useState('');
     const [Videos_Likedarray, setVideos_Liked]= useState('');
-    const [Viewers_Name, setViewers_Name]= useState('');
+    const [Viewer_Name, setViewers_Name]= useState('');
     const handlesubmit = (e) =>{
+        Age=parseInt(Age)
+        Contribution=parseInt(Contribution)
         const Videos_Disliked =Videos_Dislikedarray.split(','); 
         const Videos_Liked = Videos_Likedarray.split(',');
         e.preventDefault();
-        const blog = {Age, Contribution, Region, Videos_Disliked, Videos_Liked, Viewers_Name};
+        const blog = {Age, Contribution, Region, Videos_Disliked, Videos_Liked, Viewer_Name};
+        console.log(blog);
         
-        fetch('http://localhost:3001/api/CreateViewers',{
-            method:'POST',
+        fetch('http://localhost:3001/api/UpdateViewers',{
+            method:'PUT',
             headers:{"content-Type":"application/json"},
             body:JSON.stringify(blog)
         }).then(()=>{
-            console.log('NEW BLOG ADDED');
+            console.log('UPDATED');
         })
         setAge('');
         setContribution('');
@@ -46,16 +49,16 @@ function CreatePage () {
                 </div>
                 <br></br>
                 <br></br>
-                <form action="http://localhost:3001/api/CreateViewers" method="post" autocomplete="off">
+                <form method="post" >
                 <table>
                         <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                         <td>
                             <label className="label">AGE</label><br></br><br></br>
-                            <input type="Number" name="Age" className="textbox" value={Age} onChange={(e)=>setAge(e.target.value)}></input><br></br><br></br>
+                            <input type="Number" name="Age" className="textbox" value={parseInt(Age)} onChange={(e)=>setAge(e.target.value)}></input><br></br><br></br>
                         </td>
                         <td>
                             <label className="label">CONTRIBUTION</label><br></br><br></br>
-                            <input type="Number" name="Contribution" className="textbox" value={Contribution} onChange={(e)=>setContribution(e.target.value)}></input><br></br><br></br>
+                            <input type="Number" name="Contribution" className="textbox" value={parseInt(Contribution)} onChange={(e)=>setContribution(e.target.value)}></input><br></br><br></br>
                         </td>
                     </table>
                     <table>
@@ -73,14 +76,14 @@ function CreatePage () {
                         <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                         <td>
                             <label className="label">VIDEOS LIKED</label><br></br><br></br>
-                            <input type="String" name="Videos_Likedarray" className="textbox" value={Videos_Likedarray} onChange={(e)=>setVideos_Liked(e.target.value)}></input><br></br><br></br>
+                            <input type="text" name="Videos_Likedarray" className="textbox" value={Videos_Likedarray} onChange={(e)=>setVideos_Liked(e.target.value)}></input><br></br><br></br>
                         </td>
                         <td>
                             <label className="label">VIEWERS NAME</label><br></br><br></br>
-                            <input type="String" name="Viewers_Name" className="textbox" value={Viewers_Name} onChange={(e)=>setViewers_Name(e.target.value)}></input><br></br><br></br>
+                            <input type="text" name="Viewer_Name" className="textbox" value={Viewer_Name} onChange={(e)=>setViewers_Name(e.target.value)}></input><br></br><br></br>
                         </td>
                     </table>                    
-                    <button type="submit" className="label" onClick={handlesubmit}>INSERT</button>
+                    <button type="submit" className="label" onClick={handlesubmit}>UPDATE</button>
                 </form>
             </div>
             <Button variant="contained" className="Back" color="error" onClick={DeptPage}>Back</Button>

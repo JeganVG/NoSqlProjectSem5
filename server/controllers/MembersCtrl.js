@@ -44,13 +44,14 @@ updateMembers = async (req, res) => {
         })
     }
 
-    Members.findOne({ _id: req.params.id }, (err, YT) => {
+    Members.findOne({ Member_ID: req.body.Member_ID }, (err, YT) => {
         if (err) {
             return res.status(404).json({
                 err,
                 message: 'Members not found!',
             })
         }
+        console.log('received');
         YT.Channel_Name = body.Channel_Name
         YT.Department_ID = body.Department_ID 
         YT.Member_ID = body.Member_ID
@@ -61,7 +62,6 @@ updateMembers = async (req, res) => {
             .then(() => {
                 return res.status(200).json({
                     success: true,
-                    id: movie._id,
                     message: 'Members updated!',
                 })
             })
@@ -75,7 +75,8 @@ updateMembers = async (req, res) => {
 }
 
 deleteMembers = async (req, res) => {
-    await Members.findOneAndDelete({ _id: req.params.id }, (err, YT) => {
+    const body = req.body
+    await Members.findOneAndDelete({ Member_ID:body.Member_ID}, (err, YT) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
         }
@@ -86,7 +87,7 @@ deleteMembers = async (req, res) => {
                 .json({ success: false, error: `Members not found` })
         }
 
-        return res.status(200).json({ success: true, data: movie })
+        return res.status(200).json({ success: true, data: YT })
     }).catch(err => console.log(err))
 }
 
@@ -115,8 +116,8 @@ getMembers = async (req, res) => {
                 .status(404)
                 .json({ success: false, error: `Members not found` })
         }
-        return YT
-        // return res.status(200).json({ success: true, data: YT })
+        // return YT
+        return res.status(200).json({ success: true, data: YT })
     }).catch(err => console.log(err))
 }
 

@@ -44,14 +44,15 @@ updateVideos = async (req, res) => {
         })
     }
 
-    Videos.findOne({ _id: req.params.id }, (err, YT) => {
+    Videos.findOne({ Video_ID: body.Video_ID }, (err, YT) => {
+        console.log(YT);
         if (err) {
             return res.status(404).json({
                 err,
                 message: 'Videos not found!',
             })
         }
-        YT.Videos_ID = body.Videos_ID
+        YT.Video_ID = body.Video_ID
         YT.Genre = body.Genre 
         YT.Revenue_Collected = body.Revenue_Collected
         YT.Total_Likes = body.Total_Likes
@@ -64,7 +65,6 @@ updateVideos = async (req, res) => {
             .then(() => {
                 return res.status(200).json({
                     success: true,
-                    id: movie._id,
                     message: 'Videos updated!',
                 })
             })
@@ -78,7 +78,8 @@ updateVideos = async (req, res) => {
 }
 
 deleteVideos = async (req, res) => {
-    await Videos.findOneAndDelete({ _id: req.params.id }, (err, YT) => {
+    const body = req.body
+    await Videos.findOneAndDelete({ Video_ID: body.Video_ID }, (err, YT) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
         }
@@ -89,7 +90,7 @@ deleteVideos = async (req, res) => {
                 .json({ success: false, error: `Videos not found` })
         }
 
-        return res.status(200).json({ success: true, data: movie })
+        return res.status(200).json({ success: true, data: YT })
     }).catch(err => console.log(err))
 }
 

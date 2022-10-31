@@ -44,7 +44,8 @@ updateYoutuber = async (req, res) => {
         })
     }
 
-    Youtuber.findOne({ _id: req.params.id }, (err, YT) => {
+    Youtuber.findOne({ Youtuber_ID: body.Youtuber_ID }, (err, YT) => {
+        console.log(YT)
         if (err) {
             return res.status(404).json({
                 err,
@@ -76,7 +77,8 @@ updateYoutuber = async (req, res) => {
 }
 
 deleteYoutuber = async (req, res) => {
-    await Youtuber.findOneAndDelete({ _id: req.params.id }, (err, YT) => {
+    const body = req.body
+    await Youtuber.findOneAndDelete({ Youtuber_ID:body.Youtuber_ID}, (err, YT) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
         }
@@ -87,7 +89,7 @@ deleteYoutuber = async (req, res) => {
                 .json({ success: false, error: `Youtuber not found` })
         }
 
-        return res.status(200).json({ success: true, data: movie })
+        return res.status(200).json({ success: true, data: YT })
     }).catch(err => console.log(err))
 }
 
@@ -107,7 +109,7 @@ getYoutuberById = async (req, res) => {
 }
 
 getYoutuber = async (req, res) => {
-    await Department.find({}, (err, YT) => {
+    await Youtuber.find({}, (err, YT) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
         }

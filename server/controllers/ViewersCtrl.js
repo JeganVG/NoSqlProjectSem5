@@ -44,7 +44,8 @@ updateViewers = async (req, res) => {
         })
     }
 
-    Viewers.findOne({ _id: req.params.id }, (err, YT) => {
+    Viewers.findOne({ Viewer_Name: body.Viewer_Name }, (err, YT) => {
+        console.log(YT);
         if (err) {
             return res.status(404).json({
                 err,
@@ -62,21 +63,21 @@ updateViewers = async (req, res) => {
             .then(() => {
                 return res.status(200).json({
                     success: true,
-                    id: movie._id,
                     message: 'Viewers updated!',
                 })
             })
             .catch(error => {
                 return res.status(404).json({
                     error,
-                    message: 'Viewers updated!',
+                    message: 'Viewers not updated!',
                 })
             })
     })
 }
 
 deleteViewers = async (req, res) => {
-    await Viewers.findOneAndDelete({ _id: req.params.id }, (err, YT) => {
+    const body = req.body
+    await Viewers.findOneAndDelete({ Viewers_Name: body.Viewer_Name }, (err, YT) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
         }

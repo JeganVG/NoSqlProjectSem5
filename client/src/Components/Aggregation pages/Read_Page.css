@@ -1,19 +1,18 @@
-.Create_Page {
+.Read_Page {
     height: 100vh;
     background-color: palevioletred;
     background-image: url("./Background.jpg");
-    background-repeat:no-repeat;
-    background-attachment:fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
     opacity:0.9;
 }
 
-.Sub_Page_Create {
+.Sub_Page_Read {
     border-style: solid;
     border-radius: 50px;
-    height: 700px;
+    height: 600px;
     width: 800px;
     margin: auto;
-    background-attachment:scroll;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -24,16 +23,7 @@
     text-align: center;
 }
 
-.textarea {
-    width: 75%;
-    height: 40%;
-    opacity: 0.8;
-    font-weight: bold;
-    resize: none;
-    font-size: x-large;
-}
-
-.Create_Title {
+.Read_Title {
     border-style:ridge;
     width:60%;
     float:none;top:0;
@@ -48,31 +38,11 @@
 
 .Back {
     top:7px;
-    left:10px;
-    background-attachment: scroll;
+    left:10px
 }
 
 .Back:hover{
     color:black;
 }
 
-.Dept:hover {
-    color:black
-}
 
-
-.Videos:hover {
-    color:black
-}
-
-.Viewers:hover {
-    color:black
-}
-
-.Members:hover {
-    color:black
-}
-
-.Youtubers:hover {
-    color:black
-}

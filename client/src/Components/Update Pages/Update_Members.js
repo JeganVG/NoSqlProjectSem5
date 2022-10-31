@@ -6,7 +6,7 @@ import  {useState} from 'react'
 function CreatePage () {
 
     const DeptPage = ()=>{
-      window.location.replace("http://localhost:3000/createpage/")
+      window.location.replace("http://localhost:3000/updatepage")
     }
     const [Channel_Name, setChannel_Name] = useState('');
     const [Department_ID, setDepartment_ID] = useState('');
@@ -18,12 +18,12 @@ function CreatePage () {
         e.preventDefault();
         const blog = {Channel_Name, Department_ID, Member_ID, Member_Name, Videos_Worked};
         
-        fetch('http://localhost:3001/api/CreateMembers',{
-            method:'POST',
+        fetch('http://localhost:3001/api/UpdateMembers',{
+            method:'PUT',
             headers:{"content-Type":"application/json"},
             body:JSON.stringify(blog)
-        }).then(()=>{
-            console.log('NEW BLOG ADDED');
+        }).then((body)=>{
+            console.log(body);
         })
         setChannel_Name('');
         setDepartment_ID('');
@@ -41,7 +41,7 @@ function CreatePage () {
                 </div>
                 <br></br>
                 <br></br>
-                <form  method="post" autocomplete="off">
+                <form  method="post">
                     <label className="label">CHANNEL NAME</label><br></br><br></br>
                     <input type="text" name="Channel_Name" className="textbox" value={Channel_Name} onChange={(e)=>setChannel_Name(e.target.value)}></input><br></br><br></br>
                     <label className="label">DEPARTMENT ID</label><br></br><br></br>

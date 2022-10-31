@@ -6,7 +6,7 @@ import  {useState} from 'react'
 function CreatePage () {
 
     const DeptPage = ()=>{
-      window.location.replace("http://localhost:3000/createpage/")
+      window.location.replace("http://localhost:3000/UpdateDept")
     }
     const [Department_ID, setDepartment_ID] = useState('');
     const [Department_Name, setDepartment_Name] = useState('');
@@ -18,8 +18,8 @@ function CreatePage () {
         e.preventDefault();
         const blog = {Department_ID, Department_Name, Members, Videos_Produced};
         
-        fetch('http://localhost:3001/api/CreateDept',{
-            method:'POST',
+        fetch('http://localhost:3001/api/UpdateDept',{
+            method:'PUT',
             headers:{"content-Type":"application/json"},
             body:JSON.stringify(blog)
         }).then(()=>{
@@ -51,7 +51,7 @@ function CreatePage () {
                     <input type="text" name="Members" className="textbox" value={Membersarray} onChange={(e)=>setMembers(e.target.value)}></input><br></br><br></br>
                     <label className="label">Videos Produced</label><br></br><br></br>
                     <input type="text" name="Videos_Produced" className="textbox" value={Videos_Producedarray} onChange={(e)=>setVideos_Produced(e.target.value)}></input><br></br><br></br>
-                    <button type="submit" className="label" onClick={handlesubmit}>INSERT</button>
+                    <button type="submit" className="label" onClick={handlesubmit}>UPDATE</button>
                 </form>
             </div>
             <Button variant="contained" className="Back" color="error" onClick={DeptPage}>Back</Button>

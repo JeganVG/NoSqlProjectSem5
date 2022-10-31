@@ -5,7 +5,7 @@ import {useState} from 'react'
 function CreatePage () {
 
     const DeptPage = ()=>{
-      window.location.replace("http://localhost:3000/createpage/")
+      window.location.replace("http://localhost:3000/updatepage/")
     }
     const [Channel_Name, setChannel_Name] = useState('');
     const [Total_Dislikes, setTotal_Dislikes] = useState('');
@@ -18,12 +18,12 @@ function CreatePage () {
         e.preventDefault();
         const blog = {Channel_Name, Total_Dislikes, Total_Likes, Videos, Youtuber_ID, Youtuber_Name};
         
-        fetch('http://localhost:3001/api/CreateYoutuber',{
-            method:'POST',
+        fetch('http://localhost:3001/api/UpdateYoutuber',{
+            method:'PUT',
             headers:{"content-Type":"application/json"},
             body:JSON.stringify(blog)
         }).then(()=>{
-            console.log('NEW BLOG ADDED');
+            console.log('UPDATED');
         })
         setChannel_Name('');
         setTotal_Dislikes('');
@@ -43,7 +43,7 @@ function CreatePage () {
                 </div>
                 <br></br>
                 <br></br>
-                <form action="http://localhost:3001/api/CreateYoutuber" method="post" autocomplete="off">
+                <form  method="post">
                     <table>
                         <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                         <td>
@@ -81,7 +81,7 @@ function CreatePage () {
                             <input type="text" name="Youtuber_Name" className="textbox" value={Youtuber_Name} onChange={(e)=>setYoutuber_Name(e.target.value)}></input><br></br><br></br>
                         </td>
                     </table>
-                    <button type="submit" className="label" onClick={handlesubmit}>INSERT</button>
+                    <button type="submit" className="label" onClick={handlesubmit}>UPDATE</button>
                 </form>
             </div>
             <Button variant="contained" className="Back" color="error" onClick={DeptPage}>Back</Button>

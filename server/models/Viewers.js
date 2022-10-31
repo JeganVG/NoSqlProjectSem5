@@ -7,7 +7,8 @@ const Viewers = new Schema(
         Contribution: { type: Number, required: true },
         Region: { type:String, required: true },
         Videos_Disliked: { type: [String], required: true },
-        Videos_Liked: { type: [String], required: true }    
+        Videos_Liked: { type: [String], required: true },
+        Viewer_Name:{ type: String, required:true}
     },
     {collection:'Viewers'}
 )

@@ -5,7 +5,7 @@ import { useState } from 'react';
 function CreatePage () {
 
     const DeptPage = ()=>{
-      window.location.replace("http://localhost:3000/createpage/")
+      window.location.replace("http://localhost:3000/updatepage")
     }
     const [Video_ID, setVideo_ID] = useState('');
     const [Genre, setGenre] = useState('');
@@ -19,12 +19,12 @@ function CreatePage () {
         e.preventDefault();
         const blog = {Video_ID, Genre, Revenue_Collected, Total_Likes, Total_Dislikes, Total_Views, Video_Name, Youtuber_ID};
         
-        fetch('http://localhost:3001/api/CreateVideos',{
-            method:'POST',
+        fetch('http://localhost:3001/api/UpdateVideos',{
+            method:'PUT',
             headers:{"content-Type":"application/json"},
             body:JSON.stringify(blog)
         }).then(()=>{
-            console.log('NEW BLOG ADDED');
+            console.log('UPDATED');
         })
         setVideo_ID('');
         setGenre('');
@@ -47,7 +47,7 @@ function CreatePage () {
                 </div>
                 <br></br>
                 <br></br>
-                <form action="http://localhost:3001/api/CreateVideos" method="post" autocomplete="off">
+                <form >
                     <table>
                         <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                         <td>
@@ -93,7 +93,7 @@ function CreatePage () {
                             <input type="Number" name="Total_Views" className="textbox" value={Total_Views} onChange={(e)=>setTotal_Views(e.target.value)}></input><br></br><br></br>
                         </td>
                     </table>
-                    <button type="submit" className="label" onClick={handlesubmit}>INSERT</button>
+                    <button type="submit" className="label" onClick={handlesubmit}>UPDATE</button>
                 </form>
             </div>
             <Button variant="contained" className="Back" color="error" onClick={DeptPage}>Back</Button>
